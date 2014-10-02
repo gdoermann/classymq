@@ -8,5 +8,5 @@ Before submitting a pull request, please make sure that it follows these guideli
 * Many granular commits are preferred over large monolithic commits
 * If you're adding or modifying features, please update the documentation
 
-If you're working on a big ticket item, please check in on [classymq-users](https://groups.google.com/forum/?fromgroups#!forum/classymq-dev).
+If you're working on a big ticket item, please check in on [classymq](https://groups.google.com/forum/?fromgroups#!forum/classymq-dev).
 We'd hate to have to steer you in a different direction after you've already put in a lot of hard work.

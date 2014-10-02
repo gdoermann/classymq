@@ -7,7 +7,9 @@ classymq is a class based RabbitMQ library.
 
 [Report a Bug](https://github.com/gdoermann/classymq/issues)
 
-[Users Mailing List](https://groups.google.com/forum/?fromgroups#!forum/classymq-users)
+[Users Mailing List](https://groups.google.com/forum/?fromgroups#!forum/classymq)
+
+[Dev Mailing List](https://groups.google.com/forum/?fromgroups#!forum/classymq-dev)
 
 
 ## Installation
