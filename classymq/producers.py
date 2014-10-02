@@ -2,14 +2,13 @@ import json
 import logging
 from twisted.internet.defer import inlineCallbacks, returnValue
 import txamqp.spec
-from django.conf import settings
 from classymq import common, exchanges
 
 __author__ = 'gdoermann'
 
 logger = logging.getLogger(__name__)
 
-SPEC = txamqp.spec.load(settings.AMQP_SPEC)
+SPEC = txamqp.spec.load(common.AMQP_SPEC)
 
 class MessageProducer(object):
     """

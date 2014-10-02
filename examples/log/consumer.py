@@ -37,14 +37,13 @@ class LogConsumer(consumers.JsonMessageConsumer):
 @inlineCallbacks
 def main(args, opts):
     from classymq.factory import AmqpFactory
-    from django.conf import settings
     consumer = LogConsumer(key_params=opts)
 
     factories = []
     if args:
         dlist = []
         for host in args:
-            factory = AmqpFactory(host=host, credentials=settings.RABBIT_CREDENTIALS)
+            factory = AmqpFactory(host=host, credentials=common.RABBIT_CREDENTIALS)
             d = factory.connect()
             dlist.append(d)
             factories.append(factory)

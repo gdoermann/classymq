@@ -21,11 +21,12 @@ __author__ = 'gdoermann'
 NON_PERSISTENT = 1
 PERSISTENT = 2
 
+dirname = os.path.dirname(__file__)
 
 RABBIT_MQ_HOST = resolve_setting('RABBIT_MQ_HOST', 'localhost')
 RABBIT_MQ_PORT = resolve_setting('RABBIT_MQ_PORT', 5672)
 
-AMQP_SPEC = resolve_setting('AMQP_SPEC', 'spec.xml')
+AMQP_SPEC = resolve_setting('AMQP_SPEC', os.path.join(dirname, 'spec.xml'))
 VHOST = resolve_setting('VHOST', '/')
 EXCHANGE_NAME = resolve_setting('EXCHANGE_NAME', 'classyexchange')
 QUEUE_NAME = resolve_setting('QUEUE_NAME', 'classyqueue')

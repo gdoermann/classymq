@@ -1,6 +1,6 @@
 import logging
-from djitch.amqp import exchanges, queues
-from djitch.amqp.lib.uuid import UUIDRequest
+from classymq import exchanges, queues
+from classymq.lib.uuid import UUIDRequest
 
 log = logging.getLogger(__name__)
 

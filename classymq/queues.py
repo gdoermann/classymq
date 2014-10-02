@@ -1,7 +1,7 @@
 from twisted.internet.defer import inlineCallbacks, returnValue
 from uuid import uuid4
-from django.conf import settings
 import logging
+from classymq import common
 __author__ = 'gdoermann'
 
 logger = logging.getLogger(__name__)
@@ -67,7 +67,7 @@ class BaseTemporaryQueue(BaseQueue):
 
 
 class BasePrefixRoutingQueue(BaseQueue):
-    PREFIX = lambda *args: getattr(settings, 'LOCAL_ROUTING_PREFIX', '')
+    PREFIX = lambda *args: common.resolve_setting('LOCAL_ROUTING_PREFIX', '')
 
     def key(self, params=None):
         if params is None:

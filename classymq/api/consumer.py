@@ -1,5 +1,5 @@
 from classymq.api import common
-from djitch.amqp.lib.uuid import UUIDConsumer
+from classymq.lib.uuid import UUIDConsumer
 import logging
 
 log = logging.getLogger(__name__)

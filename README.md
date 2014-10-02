@@ -73,7 +73,7 @@ class MySynchronousProducer(synchronous.JsonProducer):
 # myservice.py
 from twisted.internet.defer import inlineCallbacks
 from twisted.internet import reactor
-from classymq import factory, settings
+from classymq import factory
 import MyConsumer
 
 consumer = MyConsumer()

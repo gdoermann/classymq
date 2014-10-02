@@ -1,5 +1,5 @@
 from classymq.api import consumer
-from djitch.amqp.lib.uuid import UUIDProducer, SyncUUIDProducer
+from classymq.lib.uuid import UUIDProducer, SyncUUIDProducer
 
 class AMQPAPIProducer(UUIDProducer):
     CONSUMER = consumer.AMQPAPIConsumer

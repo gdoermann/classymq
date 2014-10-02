@@ -1,4 +1,4 @@
-from django.utils.datastructures import SortedDict
+import collections
 from classymq.registry import RegistryBase
 
 __author__ = 'gdoermann'
@@ -39,8 +39,9 @@ class EventRegistry(RegistryBase):
         self.cataloged = True
 
     def sorted(self):
-        d = SortedDict(self.items())
-        d.keyOrder.sort()
+        sitems = self.items()
+        sitems.sort()
+        d = collections.OrderedDict(sitems)
         return d
 
     def reconstruct(self, d):

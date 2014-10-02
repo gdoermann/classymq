@@ -1,6 +1,7 @@
 clean:
 	find . -name *.pyc -delete
 	rm -rf classymq/__pycache__
+	rm -rf build/*
 
 
 build: clean
@@ -9,6 +10,8 @@ build: clean
 release: clean 
 	python setup.py sdist upload
 
+test: clean
+	trial classymq.tests
 
 .PHONY: build
 

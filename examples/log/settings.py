@@ -26,10 +26,6 @@ LOGGING = {
             },
         },
     'handlers': {
-        'null': {
-            'level':HANDLER_LEVEL,
-            'class':'django.utils.log.NullHandler',
-            },
         'console_handler': {
             'level': HANDLER_LEVEL,
             'formatter':'verbose',
