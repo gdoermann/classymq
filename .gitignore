@@ -1,0 +1,69 @@
+
+# /
+/*.egg-info
+/bin
+/segment.xml
+.support.log
+/static_serve
+/static_media/admin
+/static_media/django_extensions
+/static_media/rest_framework
+
+# /conf/fs/
+/conf/fs/freeswitch.serial
+/scripts/cron/customers/.*.last_run
+
+# /docs/_build/
+/docs/_build/doctrees
+
+.idea/
+*.swp
+*.log
+
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+# dist
+# build
+# eggs
+# parts
+# bin
+# var
+# sdist
+develop-eggs
+.installed.cfg
+
+# Installer logs
+# pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.project
+.pydevproject
+
+
+# Config Files
+conf/fs/freeswitch.serial
+local_settings.py
+
+# Tags files
+tags
+TAGS
+
+# Mako Template Modules Directory
+mako_template_modules
+
+conf/apache/callcenter.conf
+conf/apache/callcenter-ssl.conf
