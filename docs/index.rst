@@ -94,7 +94,6 @@ Getting Started
         def run():
             factory = AmqpFactory()
             yield factory.connect()
-            factories.append(factory)
             factory.read(consumer)
 
         run()
