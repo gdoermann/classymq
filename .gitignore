@@ -14,8 +14,10 @@ build/
 /conf/fs/freeswitch.serial
 /scripts/cron/customers/.*.last_run
 
-# /docs/_build/
-/docs/_build/doctrees
+# /docs/
+/docs/_build
+/docs/_static
+/docs/_templates
 
 .idea/
 *.swp
