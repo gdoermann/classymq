@@ -1,0 +1,8 @@
+ipython
+ipdb
+Sphinx
+sure==1.2.5
+mock
+pika==0.9.5
+twisted
+txamqp

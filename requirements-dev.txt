@@ -1,0 +1,12 @@
+ipython
+Sphinx
+mock
+pika==0.9.5
+twisted
+txamqp
+nose
+nose-progressive
+profilestats
+pycallgraph
+ipdbplugin==1.2
+ipdb==0.7

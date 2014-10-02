@@ -2,6 +2,7 @@
 # /
 /*.egg-info
 /bin
+build/
 /segment.xml
 .support.log
 /static_serve
