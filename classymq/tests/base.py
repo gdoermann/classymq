@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from unittest import TestCase
+from txamqp.testlib import TestBase
 from classymq.common import resolve_setting
 from twisted.internet import reactor
 from classymq import factory
@@ -23,9 +23,8 @@ class TestFactory(factory.AmqpFactory):
         raise RuntimeError('Lost AMQP connection')
 
 
-class ClassyTestCase(TestCase):
+class ClassyTestCase(TestBase):
 
-    connection = None
     defer_until_connected = None
 
     def setUp(self):
