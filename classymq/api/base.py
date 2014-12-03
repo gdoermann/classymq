@@ -1,7 +1,7 @@
 import logging
 from twisted.internet import defer
 from twisted.internet.defer import inlineCallbacks, returnValue
-from uuid import uuid4
+from uuid import uuid1
 from classymq.api.common import AMQPAPIRequest
 from classymq.api.producer import AMQPAPIProducer, SyncAMQPAPIProducer
 from classymq.api.consumer import AMQPAPIConsumer
@@ -52,7 +52,7 @@ class AMQPAPI(object):
         self.consumer = self.CONSUMER_CLASS(self.uuid, prefix=self.prefix)
 
     def _generate_uuid(self):
-        return str(uuid4())
+        return str(uuid1())
 
     @classmethod
     def serialize(cls, msg):

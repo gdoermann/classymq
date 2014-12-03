@@ -91,7 +91,5 @@ reactor.run()
 #finally, produce a message
 >>> import MySynchronousProducer, MyMessage, uuid
 >>> producer = MySynchronousProducer()
->>> message = MyMessage("Hello world!", str(uuid.uuid4())
+>>> message = MyMessage("Hello world!", str(uuid.uuid1())
 >>> producer.push(message)
-
-

@@ -1,5 +1,5 @@
 from twisted.internet.defer import inlineCallbacks, returnValue
-from uuid import uuid4
+from uuid import uuid1
 import logging
 from classymq import common
 __author__ = 'gdoermann'
@@ -18,7 +18,7 @@ class BaseQueue(object):
     def __init__(self, **params):
         super(BaseQueue, self).__init__()
         self.params = params
-        self.uuid = str(uuid4())
+        self.uuid = str(uuid1())
         self.params['instance_uuid'] = self.uuid
 
     def key(self, params=None):

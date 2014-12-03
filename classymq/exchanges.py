@@ -1,5 +1,5 @@
 from twisted.internet.defer import inlineCallbacks, returnValue
-from uuid import uuid4
+from uuid import uuid1
 from classymq import common
 import logging
 
@@ -32,7 +32,7 @@ class BaseExchange(object):
         return self.KEY.format(**full_params)
 
     def __init__(self, **params):
-        self.uuid = str(uuid4())
+        self.uuid = str(uuid1())
         super(BaseExchange, self).__init__()
         self.params = params
         self.params['instance_uuid'] = self.uuid

@@ -2,7 +2,7 @@ import json
 from twisted.internet.defer import inlineCallbacks, returnValue
 from twisted.internet import defer
 import txamqp.spec
-from uuid import uuid4
+from uuid import uuid1
 from classymq import common, queues, exchanges
 import logging
 from classymq.registry import EventRegistry
@@ -44,7 +44,7 @@ class MessageConsumer(object):
         self.running = True
         self._routing_key = None
         self.chan = self.conn = None
-        self.consumer_tag = self.CONSUMER_TAG or str(uuid4())
+        self.consumer_tag = self.CONSUMER_TAG or str(uuid1())
         self._rate = rate
         self.queue_instance = self.QUEUE(**self.key_params)
         self.exchange_instance = self.EXCHANGE(**self.key_params)

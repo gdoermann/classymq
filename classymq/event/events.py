@@ -1,5 +1,5 @@
 import json
-from uuid import uuid4
+from uuid import uuid1
 from classymq.utils import AttrDict
 
 __author__ = 'gdoermann'
@@ -16,7 +16,7 @@ class BaseEvent(AttrDict):
         super(BaseEvent, self).__init__(*args, **kwargs)
         if not self.get('event_name', None):
             self.event_name = self.NAME.format(**kwargs)
-        self.event_uuid = str(uuid4())
+        self.event_uuid = str(uuid1())
         self.update(kwargs)
 
     def routing_key(self, *args, **kwargs):
